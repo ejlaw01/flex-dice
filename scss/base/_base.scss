@@ -1,12 +1,24 @@
 body {
   background-color: $light-green;
+}
+
+h1 {
+  display: block;
+  text-align: center;
+  color:$pip-color;
+}
+
+.container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 [class*="face"] {
   @extend %tile;
+  padding: 15px;
 }
 
 .pip {
@@ -15,8 +27,8 @@ body {
   max-width: 25px;
   flex-grow: 1;
   height: 25px;
+  max-height: 25px;
   width: 25px;
-  margin: 5px;
   background: $pip-color;
 }
 
@@ -26,22 +38,50 @@ body {
 }
 
 .second-face {
-  justify-content: space-around;
-  padding: 15px 0;
+  justify-content: space-between;
   .pip:last-child {
     align-self: flex-end;
   }
 }
 
 .third-face {
-  justify-content: space-around;
+  justify-content: space-between;
   .pip {
-    margin: 15px 0;
     &:nth-child(2) {
       align-self: center;
     }
     &:last-child {
       align-self: flex-end;
     }
+  }
+}
+
+.fourth-face {
+  justify-content: space-between;
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.fifth-face {
+  justify-content: space-between;
+  .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .column:nth-child(2) {
+    align-self: center;
+  }
+}
+
+.sixth-face {
+  justify-content: space-between;
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }

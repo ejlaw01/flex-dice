@@ -17,10 +17,22 @@ html {
   margin: 8px; }
 
 body {
-  background-color: #C8DDC7;
+  background-color: #C8DDC7; }
+
+h1 {
+  display: block;
+  text-align: center;
+  color: #546A76; }
+
+.container {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto; }
+
+[class*="face"] {
+  padding: 15px; }
 
 .pip {
   -webkit-border-radius: 12.5px;
@@ -30,8 +42,8 @@ body {
   max-width: 25px;
   flex-grow: 1;
   height: 25px;
+  max-height: 25px;
   width: 25px;
-  margin: 5px;
   background: #546A76; }
 
 .first-face {
@@ -39,18 +51,38 @@ body {
   align-items: center; }
 
 .second-face {
-  justify-content: space-around;
-  padding: 15px 0; }
+  justify-content: space-between; }
   .second-face .pip:last-child {
     align-self: flex-end; }
 
 .third-face {
-  justify-content: space-around; }
-  .third-face .pip {
-    margin: 15px 0; }
-    .third-face .pip:nth-child(2) {
-      align-self: center; }
-    .third-face .pip:last-child {
-      align-self: flex-end; }
+  justify-content: space-between; }
+  .third-face .pip:nth-child(2) {
+    align-self: center; }
+  .third-face .pip:last-child {
+    align-self: flex-end; }
+
+.fourth-face {
+  justify-content: space-between; }
+  .fourth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+
+.fifth-face {
+  justify-content: space-between; }
+  .fifth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .fifth-face .column:nth-child(2) {
+    align-self: center; }
+
+.sixth-face {
+  justify-content: space-between; }
+  .sixth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
 
 /*# sourceMappingURL=application.css.map */
