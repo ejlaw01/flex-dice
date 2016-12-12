@@ -4,7 +4,53 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+[class*="face"] {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  width: 150px;
+  height: 150px;
+  min-width: 150px;
+  background-color: #F4EBE1;
+  border: 2px solid #546A76;
+  display: flex;
+  margin: 8px; }
+
 body {
-  background-color: tomato; }
+  background-color: #C8DDC7;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.pip {
+  -webkit-border-radius: 12.5px;
+  -moz-border-radius: 12.5px;
+  border-radius: 12.5px;
+  display: block;
+  max-width: 25px;
+  flex-grow: 1;
+  height: 25px;
+  width: 25px;
+  margin: 5px;
+  background: #546A76; }
+
+.first-face {
+  justify-content: center;
+  align-items: center; }
+
+.second-face {
+  justify-content: space-around;
+  padding: 15px 0; }
+  .second-face .pip:last-child {
+    align-self: flex-end; }
+
+.third-face {
+  justify-content: space-around; }
+  .third-face .pip {
+    margin: 15px 0; }
+    .third-face .pip:nth-child(2) {
+      align-self: center; }
+    .third-face .pip:last-child {
+      align-self: flex-end; }
 
 /*# sourceMappingURL=application.css.map */

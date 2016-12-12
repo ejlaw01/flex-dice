@@ -1,0 +1,47 @@
+body {
+  background-color: $light-green;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+[class*="face"] {
+  @extend %tile;
+}
+
+.pip {
+  @include roundy(12.5px);
+  display: block;
+  max-width: 25px;
+  flex-grow: 1;
+  height: 25px;
+  width: 25px;
+  margin: 5px;
+  background: $pip-color;
+}
+
+.first-face {
+  justify-content: center;
+  align-items: center;
+}
+
+.second-face {
+  justify-content: space-around;
+  padding: 15px 0;
+  .pip:last-child {
+    align-self: flex-end;
+  }
+}
+
+.third-face {
+  justify-content: space-around;
+  .pip {
+    margin: 15px 0;
+    &:nth-child(2) {
+      align-self: center;
+    }
+    &:last-child {
+      align-self: flex-end;
+    }
+  }
+}
